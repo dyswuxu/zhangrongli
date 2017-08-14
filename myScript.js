@@ -6,9 +6,11 @@ $(function () {
     win.scroll(function () {
         if(sc.scrollTop()>=0.1){
             nav.addClass("fixedNav");
+            $(".navTmp").fadeIn("slow");
         }
         else{
             nav.removeClass("fixedNav");
+            $(".navTmp").fadeOut("slow");
 
         }
 
@@ -32,9 +34,18 @@ $(function () {
             $(".nav #navRight a").removeClass("aActive").addClass("aIni").eq(0).addClass("aActive").removeClass("aIni");
         }
 
+
     });
 
-    $("#aProject,#aDesign,#aAbout,#aHome,#btn1").click(function () {
+    $("#btn1").click(function () {
+        $("html, body").animate({
+            scrollTop: $("#project").offset().top
+        }, 500);
+        return false;
+    });
+
+
+    $("#aProject,#aDesign,#aAbout,#aHome").click(function () {
         $("html, body").animate({
             scrollTop: $($.attr(this, "href")).offset().top
         }, 500);

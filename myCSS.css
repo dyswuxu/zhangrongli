@@ -28,13 +28,14 @@ body {
 }
 
 .fixedNav{
-    background: #021424;
+    background: rgba(2,20,36,1);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
     behavior: url(ie-css3.htc);
 }
+
 
 .nav .aIni{
     list-style: none;
@@ -85,11 +86,24 @@ header h1{
 
 }
 
-header #btn1 img{
+header #btn1{
     width: 330px;
-    height: 70px;
+    height: 66px;
+    background: #c61717;
     border: none;
     outline: none;
+    border-radius: 4px;
+    color: white;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+    behavior: url(ie-css3.htc);
+}
+
+header #btn1:hover{
+    background: #ad1414;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    behavior: url(ie-css3.htc);
 }
 
 #project{
@@ -189,7 +203,7 @@ p.tpbt {
 
 #about img{
     width:250px;
-    height: 250px;
+    height: 294px;
 }
 
 p.shuoming{
@@ -201,7 +215,6 @@ p.shuoming{
     padding-top: 30px;
     padding-left: 10%;
     padding-right: 10%;
-    text-indent: 40px;
 }
 
 footer{
